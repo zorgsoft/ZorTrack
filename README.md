@@ -1,4 +1,4 @@
-﻿=== Russain
+﻿﻿=== Russain
 =[ ZorTrack Ver 0.02 ]====================
 ZorTrack - Менеджер задач.
 
