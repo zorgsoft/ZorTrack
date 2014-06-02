@@ -1,48 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>ZorTrack by zorgsoft</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
     <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <title>ZorTrack by zorgsoft</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/zorgsoft/ZorTrack">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/zorgsoft/ZorTrack/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/zorgsoft/ZorTrack/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <header>
+      <div class="inner">
+        <h1>ZorTrack</h1>
+        <h2>ZorTrack - Manager working hours and tasks for a small business.</h2>
+        <a href="https://github.com/zorgsoft/ZorTrack" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-    <div class="wrapper">
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a name="-russain" class="anchor" href="#-russain"><span class="octicon octicon-link"></span></a>﻿﻿=== Russain</h2>
 
-      <section>
-        <div id="title">
-          <h1>ZorTrack</h1>
-          <p>ZorTrack - Manager working hours and tasks for a small business.</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/zorgsoft">zorgsoft</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+<h3>
+<a name="-zortrack-ver-002-" class="anchor" href="#-zortrack-ver-002-"><span class="octicon octicon-link"></span></a>=[ ZorTrack Ver 0.02 ]====================</h3>
 
-        <p>ZorTrack - Manager working hours and tasks for a small business.</p>
-      </section>
+<p><strong>ZorTrack - Менеджер задач.</strong></p>
 
+<p>Предназначен для управления задачами пользователей.
+Возможен просмотр статистики за определённые интервалы времени по каждому пользователю.</p>
+
+<p>Разделение прав на обычных пользователей и администраторов.
+Администраторы могут пользоваться всеми фунциями ZorTrack.
+Пользователи, могут просматривать свои задачи, закрывать их, создавать для себя задачи.
+Пользователи не могут просматривать или редактировать других пользователей или удалять задачи созданные не ими.</p>
+
+<p>Для установки необходим веб сервер потдерживающий PHP &gt;5 и MySQLбаза данных.</p>
+
+<p>[<strong>УСТАНОВКА</strong>]<br></p>
+
+<ul>
+<li>Скопируйте файлы в нужную вам папку на сервере<br>
+</li>
+<li>Откройте файл <code>/system/application/config/config.php</code><br>
+Замените в переменной <code>$config['base_url']</code> на урл вашего сайта<br>
+</li>
+<li>Откройте файл <code>/system/application/config/database.php</code><br>
+Поменяйте настройки доступа к базе на ваши<br>
+</li>
+<li>В вашей базе создайте таблицу с именем которое вы вписали при настройке базы, как указанно выше<br>
+</li>
+<li>Сделайте импорт sql файла со структурой таблиц <code>zortrack.sql</code><br>
+</li>
+<li>Зайдите через браузер по адресу который вы прописали для этого менеджера, например <code>http://localhost/zortrack</code><br>
+</li>
+<li>При первом открытии менеджера, когда ещё нет пользователей, вам будет предложено создать первого пользователя, он будет с административными правами.<br>
+Введите логин (логин обязательно должен быть в виде e-mail) и пароль (минимум 4 символа)<br>
+</li>
+<li>Можете пользоваться</li>
+</ul><p>[<strong>НАСТРОЙКА</strong>]<br>
+Других настроек в менеджере практически нет, разобраться и работать с ним довольно просто.<br>
+Если вы захотите сменить оформление, то вам нужно будет менять файлы вида (представления) которые находятся <code>/system/application/views/</code><br>
+CSS, JS скрипты, изображения находятся в корне с именами css, js, images<br>
+Практически всё оформление можно настроить меняя css файл <code>/css/ztrack.css</code><br></p>
+
+<p><strong>P.S. Использование данного менеджера полностью на ваш страх и риск. Приложение не тестировалось на устойчивость к взломам и писалось для внутренних нужд фирмы.</strong>
+<strong>Но если у вас появятся замечания или предложения, то я  с радостью выслушаю их.</strong></p>
+
+<p><strong>P.P.S. Написано с использованием CodeIgniter и NetBeans :)</strong></p>
+
+<p>(C) by ZoRg Soft (Sergey Agarkov)<br>
+E-Mail: <a href="mailto:zorgsoft@gmail.com">zorgsoft@gmail.com</a><br>
+ICQ: 6371025, Jabber (GoogleTalk): <a href="mailto:zorgsoft@gmail.com">zorgsoft@gmail.com</a><br>
+URL Blog  : <a href="http://agarkov.org">http://agarkov.org</a><br>
+URL Resume: <a href="http://www.agarkov.org/p/blog-page_4133.html">Resume</a><br><br></p>
+
+<p>[<strong>ИСТОРИЯ ИЗМЕНЕНИЙ</strong>]<br><strong>(0.02 - 04/08/2010)</strong><br></p>
+
+<ul>
+<li>(+) Добавлена возможность пользователям вести учёт своей посещаемости, указывать время прихода/ухода на работу и обеда. В статистике теперь также отображается общее отработанное время пользователя за вычетом времени обедов.  Время прихода/ухода учитывается только если пользователь вводил время и сохранял. Редактировать прошедшие даты нет возможности.<br>
+</li>
+</ul><p><strong>(0.01b)</strong> - Первая публичная версия<br></p>
+
+<ul>
+<li>(+) Добавленна возможность оставлять комментарии при закрытии задачи<br><br>
+</li>
+</ul><h2>
+<a name="-english" class="anchor" href="#-english"><span class="octicon octicon-link"></span></a>=== English</h2>
+
+<p><strong>ZorTrack - Task Manager.</strong>
+<br>
+Designed to manage the tasks of users.<br>
+You can view statistics for the specified intervals for each user.<br></p>
+
+<p>The division of rights to ordinary users and administrators.<br>
+Administrators can use all the functions being ZorTrack.<br>
+Users can view their tasks, close them, to create for themselves the task.<br>
+Users can not view or edit or delete other users' tasks were not created by them.<br></p>
+
+<p>To install the necessary web server PHP &gt; 5 and MySQL base.</p>
+
+<p>[<strong>SET</strong>]<br></p>
+
+<ul>
+<li>Copy the files to the desired folder on the server</li>
+<li>Open the file <code>/system/application/config/config.php</code>
+    Replace the variable <code>$ config ['base_url']</code> url on your site</li>
+<li>Open the file <code>/system/application/config/database.php</code>
+    Change the setting up access to the database on your</li>
+<li>In your database, create a table with the name that you entered when you set up the base, as above</li>
+<li>Make the import sql file with the structure of the tables <code>zortrack.sql</code>
+</li>
+<li>Go through the browser to the address that you have registered for this manager, for example <code>http://localhost/zortrack</code>
+</li>
+<li>When you first open the manager, when there are no users, you will be prompted to create the first user, it will be with administrative rights.
+    Enter your login (username must be in the form of e-mail) and password (minimum 4 characters)</li>
+<li>You can use the</li>
+</ul><p>[<strong>SETUP</strong>]<br>
+Other settings in the manager there is little, work with it rather easy.<br>
+If you want to change your registration, you will need to change the file type (view) that are <code>/system/application/views/</code><br>
+CSS, JS scripts, images are at the root named css, js, images<br>
+Almost all the design can changing in the css file <code>/css/ztrack.css</code><br></p>
+
+<p><strong>P.S. Use of this manager's entirely at your own risk. The application has not been tested for resistance to burglary and was written for the internal needs of the company.</strong>
+<strong>But if you have any comments or suggestions, I'm happy to hear them.</strong></p>
+
+<p><strong>P.P.S. This manager was written using CodeIgniter and NetBeans :)</strong></p>
+
+<p>[<strong>HISTORY</strong>]<br><strong>(0.02 - 04/08/2010)</strong><br></p>
+
+<ul>
+<li>(+) Added the possibility to users to keep records of their attendance, indicate the time of arrival / departure for work and dinner.<br>
+In statistics now also displays the total hours worked by less time lunches.<br>
+Time of arrival / departure only taken into account if the user enters the time and kept. Last edit date is not possible.<br>
+</li>
+</ul><p><strong>(0.01b)</strong> - The first public version<br></p>
+
+<ul>
+<li>(+) Added the ability to leave comments at the close of the problem</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/zorgsoft/ZorTrack/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/zorgsoft/ZorTrack/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/zorgsoft/ZorTrack"></a> is maintained by <a href="https://github.com/zorgsoft">zorgsoft</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
+  
   </body>
 </html>
